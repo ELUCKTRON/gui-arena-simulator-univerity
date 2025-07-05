@@ -25,11 +25,11 @@ jobs:
       - name: Rename JAR
         run: |
           mkdir -p release
-          cp target/ArenaSimulator-*.jar release/app.jar
+          cp target/ArenaSimulator-*.jar release/ArenaSimulator.jar
 
       - name: Release and upload JAR
         uses: softprops/action-gh-release@v1
         with:
-          files: release/app.jar
+          files: release/ArenaSimulator.jar
           tag_name: ${{ github.ref_name }}
           token: ${{ secrets.PERSONAL_TOKEN }}
